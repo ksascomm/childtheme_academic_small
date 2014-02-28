@@ -35,9 +35,8 @@
   <![endif]-->
   <?php include_once("parts-analytics.php"); ?>
 </head>
-<?php global $blog_id;
-	$site_id = 'site-' . $blog_id; ?>
-<body <?php body_class($site_id); ?>>
+<?php $theme_option = flagship_sub_get_global_options(); $color_scheme = $theme_option['flagship_sub_color_scheme']; global $blog_id; $site_id = 'site-' . $blog_id; ?>
+<body <?php body_class($color_scheme . ' ' . $site_id); ?>>	
 	<header>
 		<div class="row show-for-small">
 			<div class="four columns centered blue_bg">
